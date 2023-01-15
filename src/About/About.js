@@ -1,40 +1,4 @@
-// import React from "react";
-// import "./About.css";
-// import ReactPlayer from "react-player";
-// function About() {
-//   return (
-//     <div className="about">
-//       <div className="about-l">
-//         <div className="player">
-//           <ReactPlayer
-//             controls
-//             url="https://youtu.be/BR0jT6JxH-o"
-//             height="12rem"
-//             width="12rem"
-//           />
-//         </div>
-//         <div className="para-u">
-//           <p>Random paragraph because there is no sentence coming in my mind</p>
-//         </div>
-//       </div>
-//       <div className="about-r">
-//         <div className="player">
-//           <p>Random paragraph because there is no sentence coming in my mind</p>
-//         </div>
-//         <div className="para-d">
-//         <ReactPlayer
-//             controls
-//             url="https://youtu.be/BR0jT6JxH-o"
-//             height="12rem"
-//             width="12rem"
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
-// export default About;
 
 import React from "react";
 import "./About.css";

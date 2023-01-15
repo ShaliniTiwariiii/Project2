@@ -1,27 +1,55 @@
-import React from 'react'
-import './Footer.css'
-import Github from'../../assets/github.png';
-import Instagram from '../../assets/instagram.png';
-import LinkedIn from '../../assets/linkedin.png'
-import Logo from '../../assets/logo.png';
-function Footer() {
-  return (
- <div className='Footer-container'>
-<hr/>
-<div className='footer'>
-<div className='social-links'>
 
-    <img src={Github} alt=''/>
-    <img src={Instagram} alt=''/>
-    <img src={LinkedIn} alt=''/>
-</div>
-<div className='logo-f'>
-    <img src={Logo} alt=''/>
-</div></div>
-<div className='blur blur-f-1'></div>
-<div className='bur blur-f-2'></div>
-</div>
+
+
+import style from './Footer.module.css'
+import { FiFacebook ,FiYoutube,FiTwitter, FiLinkedin } from 'react-icons/fi';
+
+
+export default function Footer(){
+
+    const pageLInks = [
+        {
+            icon : <FiFacebook/>,
+            url : 'https://www.facebook.com'
+        },
+        {
+            icon : <FiYoutube/>,
+            url : 'https://www.youtube.com'
+        },
+        {
+            icon : <FiTwitter/>,
+            url : 'https://www.twitter.com'
+        },
+        {
+            icon : <FiLinkedin/>,
+            
+            url:' https://www.linkedin.com/'
+         
+        },
+        
+        
+
+    ]
+
+    return(
+        <footer class={style.footer}>
+            <div className={style.wrapper}>
+
+            {
+                pageLInks.map(({ icon,url},index )=> (
+                    <a href = {url} target = '_blank' key={index} >
+                        <p className = {style.icon}>
+                            {icon}
+                        </p> 
+                    </a>
+                ))
+            }
+
+            </div>
+
+          
+
+
+        </footer>
     )
 }
-
-export default Footer

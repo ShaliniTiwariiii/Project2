@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    /* position: fixed; */
+    position: fixed;
     z-index: 999;
     width: 100%;
     background-color: gray;
@@ -37,7 +37,7 @@
 
 @media screen and (max-width:768px) {
     .header>:nth-child(2) {
-        position: fixed;
+        /* position: fixed; */
         right: 2rem;
         z-index: 99;
     }

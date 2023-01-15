@@ -1,12 +1,60 @@
 
-.activity{
+/* .activity{
     display: flex;
     justify-content: space-around;
-    
-    
+    border: 2px solid black;
+    color: brown;
+   height: 50vh;
+   margin-top: ;
 }
 .activity-c{
-    width: 12vw;
-    height: 12vh;
+    width: 12vw; 
+    border: 2px solid black;
+ 
     border: solid;
+   
+    
+} */
+
+/* *{
+    background-color: gray;
+} */
+
+
+/* *{
+    background-color: gray;
+} */
+.activity {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    /* margin-top: 2rem;  */
+
+}
+
+.activity-c {
+    width: 12vw;
+    height: 25vh;
+    border: solid;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+p{
+    font-weight: bolder;
+}
+
+.activity-c:hover{
+   background-color: #f48915; 
 }

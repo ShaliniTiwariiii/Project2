@@ -3,25 +3,28 @@ import { plansData } from "../../data/plansData";
 import whiteTick from "../../assets/whiteTick.png";
 import "./Plans.css";
 import { useNavigate } from "react-router";
+import { useEffect } from "react";
 // import { useRecoilState } from "recoil";
 // import { loginAtom } from "../../atom/Atom";
 // import Activities from "../Activities/Activities";
 function Plans() {
   const navigate = useNavigate();
-  const [planValue, setPlan]= useState(0)
+  const [planValue, setPlan] = useState(0)
+  const [subscribed, setSubscribe] = useState(false)
   // const [planAtom, setPlanAtom] = useRecoilState(loginAtom);
+ 
+  
+    function subscribe(e) {
+      if (window.confirm("want to subscribe")) {
+        navigate("../Activities/Activities");
+        // console.log(e.target.name)
+        setPlan(e.target.name)
+        setSubscribe(!subscribed)
+        // setPlanAtom(planValue)
 
-  function subscribe(e) {
-    if (prompt("want to subscribe")) {
-      navigate("../Activities/Activities");
-      // console.log(e.target.name)
-      setPlan(e.target.name)
-      // setPlanAtom(planValue)
-     
+      }
     }
-  }
-
-  return (
+    return (
     <div className="plans-container" id="plans">
       <div className="blur plans-blur-1"></div>
       <div className="blur plans-blur-2"></div>
@@ -48,7 +51,7 @@ function Plans() {
               <span>see more benefits </span>
             </div>
             <button name={plansData[k].price} onClick={subscribe} className="btn" >
-              SUBSCRIBE{planValue}
+              {subscribed ? <div>Subscribed</div> : <div>Subscribe</div>}
             </button>
           </div>
         ))}
